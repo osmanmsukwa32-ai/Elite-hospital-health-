@@ -1,0 +1,778 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f9fc;
+    color: #263746;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    background: #063b5c;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #35d0c0;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #35d0c0;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 480px;
+    background: linear-gradient(
+        120deg,
+        #063b5c,
+        #087b91
+    );
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.welcome {
+    color: #35d0c0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #35d0c0;
+}
+
+.hero-content > p:not(.welcome) {
+    margin-bottom: 25px;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+    background: #35d0c0;
+    color: #063b5c;
+    padding: 12px 22px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: white;
+}
+
+.btn.secondary {
+    background: white;
+    color: #063b5c;
+}
+
+/* SERVICES */
+
+.services {
+    padding: 65px 7%;
+    text-align: center;
+}
+
+.services h2,
+.about h2 {
+    font-size: 30px;
+    color: #063b5c;
+    margin-bottom: 10px;
+}
+
+.section-text {
+    margin-bottom: 30px;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    padding: 25px 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.service-card h3 {
+    color: #087b91;
+    margin-bottom: 12px;
+}
+
+/* ABOUT */
+
+.about {
+    padding: 60px 8%;
+    text-align: center;
+    background: #e6f4f5;
+}
+
+.about p {
+    max-width: 650px;
+    margin: 15px auto 25px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #063b5c;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 420px;
+        padding: 45px 6%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .service-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+}
+
+/* ABOUT PAGE */
+
+.page-banner {
+    background: linear-gradient(120deg, #063b5c, #087b91);
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.page-banner h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.about-page {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.about-content {
+    margin-bottom: 30px;
+}
+
+.about-content h2,
+.about-box h2 {
+    color: #087b91;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+}
+
+.about-box {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+}
+
+.about-box ul {
+    padding-left: 25px;
+}
+
+.about-box li {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 480px) {
+    .page-banner h1 {
+        font-size: 28px;
+    }
+}
+
+/* HOSPITAL SERVICES PAGE */
+
+.hospital-services {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.hospital-service-card {
+    background: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.hospital-service-card:hover {
+    transform: translateY(-6px);
+}
+
+.service-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hospital-service-card h2 {
+    color: #087b91;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.health-notice {
+    background: #e6f4f5;
+    padding: 35px 7%;
+    text-align: center;
+}
+
+.health-notice h2 {
+    color: #063b5c;
+    margin-bottom: 12px;
+}
+
+.health-notice p {
+    max-width: 800px;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .hospital-services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .hospital-services {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* DOCTORS PAGE */
+
+.doctors-section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.doctor-card {
+    background: white;
+    padding: 25px 15px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-6px);
+}
+
+.doctor-avatar {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.doctor-card h2 {
+    color: #063b5c;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.doctor-specialty {
+    color: #087b91;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.doctor-card p {
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .doctors-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .doctors-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* APPOINTMENT PAGE */
+
+.appointment-section {
+    padding: 50px 20px;
+    background: #f5f9fc;
+}
+
+#appointmentForm {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+#appointmentForm h2 {
+    color: #063b5c;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#appointmentForm label {
+    display: block;
+    margin: 15px 0 7px;
+    font-weight: bold;
+}
+
+#appointmentForm input,
+#appointmentForm select,
+#appointmentForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd8df;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+#appointmentForm input:focus,
+#appointmentForm select:focus,
+#appointmentForm textarea:focus {
+    outline: 2px solid #35d0c0;
+    border-color: #087b91;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 22px;
+    background: #087b91;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #063b5c;
+}
+
+#formMessage {
+    text-align: center;
+    margin-top: 15px;
+    color: #087b91;
+    font-weight: bold;
+}
+
+@media (max-width: 480px) {
+    #appointmentForm {
+        padding: 20px 15px;
+    }
+}
+
+/* CONTACT PAGE */
+
+.contact-section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.contact-info h2,
+.contact-form-container h2 {
+    color: #063b5c;
+    margin-bottom: 20px;
+}
+
+.contact-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.contact-card h3 {
+    color: #087b91;
+    margin-bottom: 8px;
+}
+
+.contact-form-container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+#contactForm label {
+    display: block;
+    margin: 15px 0 7px;
+    font-weight: bold;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd8df;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    outline: 2px solid #35d0c0;
+}
+
+#contactResponse {
+    margin-top: 15px;
+    color: #087b91;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* RESPONSIVE NAVIGATION */
+
+.menu-toggle {
+    display: none;
+    background: #35d0c0;
+    color: #063b5c;
+    border: none;
+    padding: 8px 13px;
+    font-size: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav a {
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #35d0c0;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 15px 0;
+        gap: 15px;
+    }
+
+    header nav.active {
+        display: flex;
+    }
+
+    header nav a {
+        display: block;
+        padding: 8px;
+    }
+}
+
+/* =================================
+   ELITE HOSPITAL DESIGN UPGRADE
+================================= */
+
+:root {
+    --primary: #063b5c;
+    --secondary: #087b91;
+    --accent: #35d0c0;
+    --light: #f5f9fc;
+    --white: #ffffff;
+    --text: #263746;
+    --shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--text);
+    background: var(--light);
+}
+
+/* HEADER UPGRADE */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+}
+
+.logo {
+    letter-spacing: 1px;
+}
+
+/* HERO UPGRADE */
+
+.hero {
+    background: linear-gradient(
+        120deg,
+        #063b5c,
+        #087b91,
+        #0a9c9b
+    );
+}
+
+.hero h1 {
+    font-weight: 800;
+}
+
+.hero-content p {
+    font-size: 17px;
+}
+
+/* BUTTON UPGRADE */
+
+.btn,
+.submit-btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover,
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+/* CARD UPGRADE */
+
+.service-card,
+.hospital-service-card,
+.doctor-card,
+.contact-card,
+.about-box {
+    border: 1px solid #e5edf2;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover,
+.hospital-service-card:hover,
+.doctor-card:hover,
+.contact-card:hover,
+.about-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+/* SECTION UPGRADE */
+
+.services,
+.about-page,
+.doctors-section,
+.hospital-services,
+.contact-section {
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FORM UPGRADE */
+
+input,
+textarea,
+select {
+    transition: border 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(8,123,145,0.12);
+    outline: none;
+}
+
+/* FOOTER UPGRADE */
+
+footer {
+    border-top: 4px solid var(--accent);
+}
+
+footer h3 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+/* MOBILE UPGRADE */
+
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .page-banner {
+        padding: 45px 15px;
+    }
+
+    .services,
+    .about-page,
+    .doctors-section,
+    .hospital-services,
+    .contact-section {
+        padding: 35px 15px;
+    }
+
+    .btn {
+        margin: 5px 2px;
+    }
+}
+
+/* SERVICE SEARCH SYSTEM */
+
+.service-search {
+    text-align: center;
+    padding: 40px 20px 10px;
+}
+
+.service-search h2 {
+    color: #063b5c;
+    margin-bottom: 20px;
+}
+
+#serviceSearch {
+    width: 90%;
+    max-width: 550px;
+    padding: 15px;
+    border: 2px solid #087b91;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+#searchMessage {
+    margin-top: 12px;
+    color: #087b91;
+    font-size: 14px;
+}

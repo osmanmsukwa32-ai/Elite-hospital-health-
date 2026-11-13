@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Request an appointment through the ELITE Hospital demonstration website.">
+
+    <title>Appointments | ELITE Hospital</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            ELITE <span>HOSPITAL</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="doctors.html">Doctors</a>
+            <a href="appointments.html">Appointments</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="page-banner">
+        <h1>Book An Appointment</h1>
+        <p>Submit a request to contact the hospital.</p>
+    </section>
+
+    <section class="appointment-section">
+
+        <form id="appointmentForm">
+
+            <h2>Appointment Request Form</h2>
+
+            <label for="fullname">Full Name</label>
+            <input
+    type="text"
+    id="fullname"
+    placeholder="Enter your full name"
+    maxlength="80"
+    autocomplete="name"
+    required
+>
+
+            <label for="phone">Phone Number</label>
+            <input
+    type="tel"
+    id="phone"
+    maxlength="20"
+    autocomplete="tel"
+    required
+>
+
+            <label for="email">Email Address</label>
+            <input
+    type="email"
+    id="email"
+    maxlength="120"
+    autocomplete="email"
+>
+
+            <label for="service">Select Service</label>
+            <select id="service" required>
+                <option value="">Choose a service</option>
+                <option>General Healthcare</option>
+                <option>Maternity Services</option>
+                <option>Dental Care</option>
+                <option>Laboratory Services</option>
+                <option>Pharmacy</option>
+            </select>
+
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" required>
+
+            <label for="message">Additional Information</label>
+            <textarea
+    id="message"
+    rows="5"
+    maxlength="500"
+    placeholder="Write your message">
+</textarea>
+
+            <button type="submit" class="submit-btn">
+                Submit Appointment Request
+            </button>
+
+            <p id="formMessage"></p>
+
+        </form>
+
+    </section>
+
+    <section class="health-notice">
+        <h2>Important Notice</h2>
+        <p>
+            This is a demonstration form only. It does not
+            send or save appointment requests. Do not enter
+            private medical information. For urgent medical
+            needs, contact a qualified healthcare facility.
+        </p>
+    </section>
+
+  
+<section class="health-notice">
+    <h2>Privacy & Data Protection</h2>
+
+    <p>
+        Please do not submit passwords, medical records,
+        financial details or other sensitive personal
+        information through this demonstration website.
+    </p>
+
+    <p>
+        This website does not securely store or transmit
+        appointment or contact information.
+    </p>
+</section>
+
+    <footer>
+        <h3>ELITE HOSPITAL</h3>
+        <p>Quality Healthcare. Compassionate Service.</p>
+        <p>&copy; 2026 ELITE Hospital. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
